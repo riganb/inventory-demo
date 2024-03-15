@@ -12,7 +12,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col md:flex-row h-full gap-5 items-center justify-start p-5">
-      <div className="md:w-1/3 w-full md:h-full h-1/3 bg-blue-500 overflow-hidden">
+      <div className="md:w-1/3 w-full md:h-full h-1/3 rounded-lg overflow-hidden">
         <QrReader
           onResult={onScanResult}
           constraints={{ facingMode: "environment" }}
