@@ -48,13 +48,13 @@ export default function Home() {
   };
 
   return (
-    <div className="flex h-full items-center justify-center w-full flex-row gap-5 flex-wrap">
+    <div className="flex h-full items-center justify-center w-full flex-col md:flex-row gap-5 flex-wrap">
       {Inventories.map((inventory) => (
         <div
           onClick={updateSelectedInventoryId(inventory.id)}
           key={inventory.id}
           className={clsx(
-            "flex p-4 rounded-lg gap-5 hover:bg-emerald-500 hover:text-white hover:shadow-md hover:shadow-emerald-800 text-2xl items-end",
+            "flex flex-col md:flex-row p-4 rounded-lg gap-5 hover:bg-emerald-500 hover:text-white hover:shadow-md hover:shadow-emerald-800 text-2xl items-end",
             inventory.id === selectedInventoryId
               ? "bg-emerald-700 text-white shadow-md shadow-emerald-800 font-bold"
               : "bg-white text-emerald-700"
