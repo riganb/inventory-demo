@@ -19,7 +19,7 @@ export default function Home() {
           scanDelay={1000}
         />
       </div>
-      <div className="flex-1 text-3xl">
+      <div className="flex-1 text-3xl break-all">
         <span className="text-blue-500">Last decoded value:</span> {decodedText}
       </div>
     </div>
