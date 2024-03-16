@@ -34,11 +34,17 @@ export default function Home() {
   useEffect(() => {
     if (selectedInventoryId) {
       localStorage.setItem(INVENTORY_KEY, selectedInventoryId);
+    } else {
+      localStorage.removeItem(INVENTORY_KEY);
     }
   }, [selectedInventoryId]);
 
   const updateSelectedInventoryId = (inventoryId: string) => () => {
-    setSelectedInventoryId(inventoryId);
+    if (inventoryId === selectedInventoryId) {
+      setSelectedInventoryId(null);
+    } else {
+      setSelectedInventoryId(inventoryId);
+    }
   };
 
   return (
